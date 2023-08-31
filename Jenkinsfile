@@ -1,9 +1,24 @@
 pipeline {
-    agent { docker { image 'node:18.17.0-alpine3.18' } }
+    agent any
     stages {
-        stage('build') {
+        stage('Compile') {
             steps {
-                sh 'node --version'
+                echo 'Compile Successfully'
+            }
+        }
+        stage('Compile') {
+            steps {
+                echo 'JUnit Passed Successfully'
+            }
+        }
+        stage('Quality-Gate') {
+            steps {
+                echo 'Quality-Gate Passed Successfully'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Pass! '
             }
         }
     }
