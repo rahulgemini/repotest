@@ -1,12 +1,13 @@
 pipeline {
     agent any
+
     stages {
         stage('Compile') {
             steps {
                 echo 'Compile Successfully'
             }
         }
-        stage('Compile') {
+        stage('Junit') {
             steps {
                 echo 'JUnit Passed Successfully'
             }
@@ -22,4 +23,6 @@ pipeline {
             }
         }
     }
-}
+
+    }
+
